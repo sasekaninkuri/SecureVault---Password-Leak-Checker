@@ -1,0 +1,146 @@
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Body Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Sticky background */
+  font-family: Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(160, 76, 173, 0.9);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+  margin-top: 100px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a04cad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8e3c99;
+}
+
+/* Scrollable Card Container */
+.scroll-box {
+  max-height: 400px;       /* Set max height for scrolling */
+  overflow-y: auto;        /* Enable vertical scrolling */
+  padding-right: 10px;     /* For scrollbar spacing */
+  margin-top: 30px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Card */
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Result Output */
+.result {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.scroll-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background-color: #a04cad;
+  border-radius: 4px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+  .navbar {
+    background-color: red !important;
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    padding: 15px 30px;
+    color: white;
+    z-index: 9999;
+  }
