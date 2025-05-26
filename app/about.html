@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - SecureLink Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <h2>SecureLink</h2>
+    <div class="nav-links">
+        <a href="/" onclick="navigateTo(event, '/')">Home</a>
+        <a href="/about" onclick="navigateTo(event, '/about')">About</a>
+        <a href="/report" onclick="navigateTo(event, '/report')">Report</a>
+        <a href="/contact" onclick="navigateTo(event, '/contact')">Contact</a>
+      </div>
+      
+  </div>
+
+  <section class="container-image">
+    <div class="container">
+      <h1 class="title">About SecureLink Analyzer</h1>
+      <p>
+        SecureLink Analyzer is a web-based cybersecurity tool designed to help users evaluate the safety of any URL.
+        It performs risk assessments based on domain age, WHOIS data, HTTPS usage, suspicious TLDs, and more.
+      </p>
+      <p>
+        This tool is perfect for individuals, businesses, and cybersecurity analysts who want to verify the trustworthiness of web links before clicking.
+      </p>
+    </div>
+    <footer>
+      <p>© 2025 SecureLink Analyzer. All rights reserved.</p>
+    </footer>
+  </section>
+
+  <script>
+    function navigateTo(event, path) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = path;
+    }
+  </script>
+  
+</body>
+</html>

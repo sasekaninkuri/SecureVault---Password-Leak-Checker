@@ -136,6 +136,15 @@ async function clearHistory() {
   }
 }
 
+function navigateTo(event, path) {
+  event.preventDefault();
+  console.log(`Navigating to: ${path}`);
+  setTimeout(() => {
+    window.location.href = path;
+  }, 100); // slight delay if needed
+}
+
+
 
 
 
