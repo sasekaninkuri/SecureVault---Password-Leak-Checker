@@ -101,6 +101,42 @@ function clearHistory() {
   displayHistory();                       // Refresh displayed list
 }
 
+async function fetchHistory() {
+  const res = await fetch('/get_history');
+  const data = await res.json();
+  displayHistory(data.history);
+}
+
+function displayHistory(history) {
+  const historyList = document.getElementById("historyList");
+  historyList.innerHTML = "";
+  history.forEach(url => {
+    const li = document.createElement("li");
+    li.textContent = url;
+    historyList.appendChild(li);
+  });
+}
+
+async function saveToHistory(url) {
+  if (!url.trim()) return;
+  const res = await fetch('/add_url', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ url })
+  });
+  const data = await res.json();
+  displayHistory(data.history);
+}
+
+async function clearHistory() {
+  const res = await fetch('/clear_history', { method: 'POST' });
+  const data = await res.json();
+  if (data.status === "cleared") {
+    displayHistory([]);
+  }
+}
+
+
 
 
   
