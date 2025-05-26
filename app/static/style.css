@@ -17,6 +17,8 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   min-height: 100vh;
+  background: url(./image/1111.jpg);
+ background-size: cover;
 }
 
 /* Navbar */
@@ -137,7 +139,7 @@ body {
 
 
   .navbar {
-    background-color: red !important;
+    background-color: rgb(239, 57, 200) !important;
     position: fixed;
     top: 0; left: 0; width: 100%;
     padding: 15px 30px;

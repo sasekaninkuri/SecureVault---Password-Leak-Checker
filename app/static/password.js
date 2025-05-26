@@ -73,4 +73,68 @@ async function analyzeURL() {
   `;
 }
 
+
+
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+function exportReport() {
+  window.print();
+}
+
+function saveToHistory(url) {
+  let history = JSON.parse(localStorage.getItem("urlHistory")) || [];
+  history.push(url);
+  localStorage.setItem("urlHistory", JSON.stringify(history));
+  displayHistory();
+}
+
+function displayHistory() {
+  const history = JSON.parse(localStorage.getItem("urlHistory")) || [];
+  const historyList = document.getElementById("historyList");
+  historyList.innerHTML = "";
+  history.forEach(url => {
+    const li = document.createElement("li");
+    li.textContent = url;
+    historyList.appendChild(li);
+  });
+}
+
+function updateRiskChart(score) {
+  const ctx = document.getElementById('riskChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Risk', 'Safe'],
+      datasets: [{
+        data: [score, 100 - score],
+        backgroundColor: ['#f87171', '#34d399'],
+      }]
+    },
+    options: { responsive: true, cutout: '80%' }
+  });
+}
+
+async function analyzeURL() {
+  const url = document.getElementById('urlInput').value;
+  saveToHistory(url);
+
+  const response = await fetch('/analyze', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url })
+  });
+
+  const data = await response.json();
+  document.getElementById('httpsStatus').innerText = data.https_check || "Error";
+  document.getElementById('domainAnalysis').innerText = data.domain_analysis || "Error";
+  document.getElementById('redirectInfo').innerText = data.redirect_check || "Error";
+  document.getElementById('phishingRisk').innerText = data.phishing_risk || "Error";
+  document.getElementById('result').innerHTML = data.suggestions ? '<strong>Suggestions:</strong> ' + data.suggestions.join(', ') : '';
+  updateRiskChart(data.score || 50);
+}
+
+displayHistory();
+
   
