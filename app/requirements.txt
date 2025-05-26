@@ -1,3 +1,4 @@
 flask
 tldextract
 python-whois
+google-generativeai # Added this line for the Gemini API

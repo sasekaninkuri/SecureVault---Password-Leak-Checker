@@ -11,7 +11,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #1e293b;
+    background-color: rgba(160, 76, 173, 0.9);
     color: white;
   }
   
@@ -58,12 +58,13 @@ body {
     margin-bottom: 1rem;
   }
   
-  footer {
+ /* Footer */
+footer {
+    background-color: #1f2937;
+    color: #ffffff;
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #1e293b;
-    color: white;
-    margin-top: 2rem;
-    border-top: 1px solid #e5e7eb;
+    padding: 2rem;
+    font-size: 14px;
+    border-top: 1px solid #374151;
   }
   

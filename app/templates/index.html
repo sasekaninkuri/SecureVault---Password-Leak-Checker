@@ -14,6 +14,9 @@
     <div class="nav-links">
       <a href="/">Home</a>
       <a href="/about">About</a>
+      <a href="#" id="aboutLink">About</a>
+
+      
       <a href="/report">Report</a>
       <a href="/contact">Contact</a>
     </div>
@@ -44,6 +47,21 @@
       <h2>Historical URL Lookups</h2>
       <ul id="historyList"></ul>
     </div>
+
+
+    <!-- Chat Section -->
+<section id="educational-chat">
+  <div class="chat-container" id="chat-container">
+    <h2>💬 Ask Me Anything</h2>
+    <div id="chat-box">
+      <div class="bot-msg">Hello! I'm your CyberSec Bot 🤖. How can l help you today?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Ask me about anything ..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</section>
 
     <div id="backToTop" onclick="scrollToTop()">⬆ Top</div>
 
@@ -162,6 +180,23 @@
   }
 
   displayHistory();
+
+</script>
+
+
+
+<script>
+  const backToTop = document.getElementById("backToTop");
+
+window.onscroll = function () {
+  backToTop.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+    ? "block"
+    : "none";
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 </script>
 </body>
 </html>

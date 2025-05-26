@@ -8,7 +8,19 @@ analyzer = URLAnalyzer()
 def index():
     return render_template('index.html')
 
-@url_bp.route('/analyze', methods=['POST'])
+@url_bp.route('/about', methods=['GET'])  # Fixed: added slash and changed method to GET
+def about():
+    return render_template('about.html')
+
+@url_bp.route('/contact', methods=['GET'])  # Fixed
+def contact():
+    return render_template('contact.html')
+
+@url_bp.route('/report', methods=['GET'])  # Fixed
+def report():
+    return render_template('report.html')
+
+@url_bp.route('/analyze', methods=['POST'])  # This one is already correct
 def analyze():
     try:
         data = request.get_json()
