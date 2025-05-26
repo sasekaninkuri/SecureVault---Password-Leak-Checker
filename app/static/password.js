@@ -96,5 +96,11 @@ function updateRiskChart(score) {
 // Initialize history on page load
 displayHistory();
 
+function clearHistory() {
+  localStorage.removeItem("urlHistory");  // Clear saved URLs
+  displayHistory();                       // Refresh displayed list
+}
+
+
 
   
