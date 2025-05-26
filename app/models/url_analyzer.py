@@ -14,8 +14,8 @@ class URLAnalyzer:
             "verdict": "",
             "score": 0,
             "flags": [],
-            "whois": {},
-            "ssl": {}
+            "whois_info": {},           # renamed from whois
+            "ssl_certificate": {}       # renamed from ssl
         }
 
         score = 0
@@ -28,10 +28,13 @@ class URLAnalyzer:
 
         try:
             parsed = urlparse(url)
+            if not parsed.hostname:
+                return {"error": "Invalid URL"}
+
             extracted = tldextract.extract(url)
             domain = f"{extracted.domain}.{extracted.suffix}".lower()
 
-            # HTTPS Check
+            # === HTTPS Check ===
             if parsed.scheme != 'https':
                 result["https_check"] = "Insecure (HTTP)"
                 flags.append("Uses HTTP instead of HTTPS")
@@ -39,23 +42,23 @@ class URLAnalyzer:
             else:
                 result["https_check"] = "Secure (HTTPS)"
 
-            # Check if IP address used
+            # === IP Address Check ===
             try:
                 ipaddress.ip_address(parsed.hostname)
                 flags.append("Uses IP address instead of domain")
+                result["domain_analysis"] = "Uses IP address"
                 score += 2
-                result["domain_analysis"] = "Uses IP address instead of domain"
             except ValueError:
                 result["domain_analysis"] = "Domain format is valid"
 
-            # Suspicious TLD Check
+            # === Suspicious TLD Check ===
             suspicious_tlds = {'.ru', '.cn', '.tk', '.ml', '.ga'}
             if any(domain.endswith(tld) for tld in suspicious_tlds):
                 flags.append(f"Suspicious TLD: {domain}")
                 score += 2
                 result["domain_analysis"] += " + Suspicious TLD"
 
-            # WHOIS Analysis
+            # === WHOIS Lookup ===
             try:
                 whois_data = whois.whois(domain)
                 creation_date = whois_data.creation_date
@@ -68,39 +71,41 @@ class URLAnalyzer:
                     result["domain_analysis"] += " + Newly registered domain"
 
                 domain_info = {
-                    "domain_name": str(whois_data.domain_name),
-                    "registrar": str(whois_data.registrar),
-                    "creation_date": str(creation_date),
-                    "expiration_date": str(whois_data.expiration_date)
+                    "domain": str(whois_data.domain_name) if whois_data.domain_name else "N/A",
+                    "registrar": str(whois_data.registrar) if whois_data.registrar else "N/A",
+                    "created": str(creation_date) if creation_date else "N/A",
+                    "expires": str(whois_data.expiration_date) if whois_data.expiration_date else "N/A"
                 }
             except Exception:
                 flags.append("WHOIS lookup failed")
                 domain_info = {
-                    "domain_name": "N/A",
+                    "domain": "N/A",
                     "registrar": "N/A",
-                    "creation_date": "N/A",
-                    "expiration_date": "N/A"
+                    "created": "N/A",
+                    "expires": "N/A"
                 }
 
-            # Redirect check — fake for now
+            # === Redirect check (Stub) ===
             result["redirect_check"] = "No redirect detected (stub)"
 
-            # Dummy SSL info
+            # === Dummy SSL Certificate Info (Stub) ===
             ssl_info = {
-                "issuer": [["CN", "Let's Encrypt"]],
-                "notAfter": "2025-12-31"
+                "issuer": "Let's Encrypt",
+                "expires": "2025-12-31"
             }
 
-            # Phishing risk summary
+            # === Verdict & Risk Score ===
             result["phishing_risk"] = "High" if score >= 4 else "Low"
             result["verdict"] = "Suspicious" if score >= 4 else "Likely Safe"
             result["score"] = score
             result["flags"] = flags
-            result["whois"] = domain_info
-            result["ssl"] = ssl_info
+            result["whois_info"] = domain_info
+            result["ssl_certificate"] = ssl_info
 
         except Exception as e:
-            return {"error": str(e)}
+            return {"error": f"Analysis failed: {str(e)}"}
 
         return result
+
+
         

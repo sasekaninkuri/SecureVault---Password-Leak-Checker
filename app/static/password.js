@@ -1,5 +1,3 @@
-// File: app/static/main.js
-
 async function analyzeURL() {
   const url = document.getElementById('urlInput').value;
 
@@ -8,34 +6,16 @@ async function analyzeURL() {
     return;
   }
 
-  // Basic Local Analysis
-  let parser;
+  // Basic URL validation
   try {
-    parser = new URL(url);
+    new URL(url);
   } catch (e) {
     alert("Invalid URL format.");
     return;
   }
 
-  // HTTPS Check
-  const isHttps = parser.protocol === "https:";
-  document.getElementById("httpsStatus").innerText = isHttps ? "✅ Secure (HTTPS)" : "❌ Not Secure (HTTP)";
+  saveToHistory(url);
 
-  // Domain Analysis
-  const domain = parser.hostname;
-  const suspiciousKeywords = ["login", "secure", "verify", "bank"];
-  const containsSuspicious = suspiciousKeywords.some(keyword => domain.includes(keyword));
-  document.getElementById("domainAnalysis").innerText = containsSuspicious ? "⚠️ Suspicious keywords in domain" : "✅ No red flags";
-
-  // Redirection Check
-  const hasRedirect = url.toLowerCase().includes("redirect");
-  document.getElementById("redirectInfo").innerText = hasRedirect ? "⚠️ May redirect" : "✅ No obvious redirection";
-
-  // Phishing Risk Check
-  const phishingRisk = domain.includes("google.com.") || domain.split('.').length > 3;
-  document.getElementById("phishingRisk").innerText = phishingRisk ? "⚠️ Possible phishing pattern" : "✅ Low risk";
-
-  // Backend Analysis via Flask
   const response = await fetch('/analyze', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -43,37 +23,34 @@ async function analyzeURL() {
   });
 
   const data = await response.json();
-  const resultDiv = document.getElementById('result');
 
-  if (data.error) {
-    resultDiv.innerHTML = `<p class="error">Error: ${data.error}</p>`;
-    return;
-  }
+  // Update UI with backend results or fallback to error text
+  document.getElementById('httpsStatus').innerText = data.https_check || "Error";
+  document.getElementById('domainAnalysis').innerText = data.domain_analysis || "Error";
+  document.getElementById('redirectInfo').innerText = data.redirect_check || "Error";
+  document.getElementById('phishingRisk').innerText = data.phishing_risk || "Error";
 
-  resultDiv.innerHTML = `
-    <h2 class="subtitle">Verdict: ${data.verdict || 'Unknown'}</h2>
-    <ul class="flags">
-      ${data.flags?.map(flag => `<li>${flag}</li>`).join("") || '<li>None</li>'}
-    </ul>
-    <p class="score">Score: ${data.score ?? 'N/A'}</p>
+  // Display extended info in the result div
+  document.getElementById('result').innerHTML = `
+    <strong>Verdict:</strong> ${data.verdict || 'N/A'}<br/>
+    <strong>Notes:</strong> ${data.notes || 'None'}<br/>
+    <strong>Score:</strong> ${data.score ?? 'N/A'}<br/><br/>
 
-    <div class="section">
-      <h3>WHOIS Info:</h3>
-      <p><strong>Domain:</strong> ${data.whois?.domain_name || "N/A"}</p>
-      <p><strong>Registrar:</strong> ${data.whois?.registrar || "N/A"}</p>
-      <p><strong>Created:</strong> ${data.whois?.creation_date || "N/A"}</p>
-      <p><strong>Expires:</strong> ${data.whois?.expiration_date || "N/A"}</p>
-    </div>
+    <strong>WHOIS Info:</strong><br/>
+    Domain: ${data.whois_info?.domain || 'N/A'}<br/>
+    Registrar: ${data.whois_info?.registrar || 'N/A'}<br/>
+    Created: ${data.whois_info?.created || 'N/A'}<br/>
+    Expires: ${data.whois_info?.expires || 'N/A'}<br/><br/>
 
-    <div class="section">
-      <h3>SSL Certificate:</h3>
-      <p><strong>Issuer:</strong> ${data.ssl?.issuer?.[0]?.[1] || "N/A"}</p>
-      <p><strong>Expires:</strong> ${data.ssl?.notAfter || "N/A"}</p>
-    </div>
+    <strong>SSL Certificate:</strong><br/>
+    Issuer: ${data.ssl_certificate?.issuer || 'N/A'}<br/>
+    Expires: ${data.ssl_certificate?.expires || 'N/A'}<br/><br/>
+
+    ${data.suggestions ? '<strong>Suggestions:</strong> ' + data.suggestions.join(', ') : ''}
   `;
+
+  updateRiskChart(data.score ?? 50);
 }
-
-
 
 function toggleMode() {
   document.body.classList.toggle("dark-mode");
@@ -116,25 +93,8 @@ function updateRiskChart(score) {
   });
 }
 
-async function analyzeURL() {
-  const url = document.getElementById('urlInput').value;
-  saveToHistory(url);
-
-  const response = await fetch('/analyze', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ url })
-  });
-
-  const data = await response.json();
-  document.getElementById('httpsStatus').innerText = data.https_check || "Error";
-  document.getElementById('domainAnalysis').innerText = data.domain_analysis || "Error";
-  document.getElementById('redirectInfo').innerText = data.redirect_check || "Error";
-  document.getElementById('phishingRisk').innerText = data.phishing_risk || "Error";
-  document.getElementById('result').innerHTML = data.suggestions ? '<strong>Suggestions:</strong> ' + data.suggestions.join(', ') : '';
-  updateRiskChart(data.score || 50);
-}
-
+// Initialize history on page load
 displayHistory();
+
 
   
