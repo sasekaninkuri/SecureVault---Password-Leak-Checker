@@ -20,15 +20,27 @@
   <section class="container-image">
     <div class="container">
       <h1 class="title">Report a Suspicious URL</h1>
-      <form id="reportForm" action="/submit-report" method="post" onsubmit="return validateForm()">
+  
+      <!-- Flash message block -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="message {{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+  
+      <form id="reportForm" action="/report" method="post" onsubmit="return validateForm()">
         <input type="text" name="url" id="url" placeholder="Suspicious URL" required class="input" />
         <textarea name="details" placeholder="Describe the issue..." required class="input" rows="5"></textarea>
         <button type="submit" class="button">Submit Report</button>
         <button type="button" class="button" onclick="resetForm()">Reset</button>
       </form>
+  
       <div id="successMessage" class="message" style="display:none;">Report submitted successfully!</div>
     </div>
   </section>
+  
 
   <footer class="footer">
     <p>&copy; 2025 Your Company Name. All rights reserved.</p>

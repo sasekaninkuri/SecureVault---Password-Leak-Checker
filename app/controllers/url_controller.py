@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for, flash
 from app.models.url_analyzer import URLAnalyzer
+from app import mongo
 
 url_bp = Blueprint('url_bp', __name__)
 analyzer = URLAnalyzer()
@@ -25,16 +26,46 @@ def about():
 def contact():
     return render_template('contact.html')
 
+
+
+
+
+
+url_bp = Blueprint('url_bp', __name__)
+
 @url_bp.route('/report', methods=['GET', 'POST'])
 def report():
     if request.method == 'POST':
         url = request.form['url']
         details = request.form['details']
-        process_report(url, details)  # Process the report
+        
+        # Save to MongoDB
+        mongo.db.reports.insert_one({
+            'url': url,
+            'details': details
+        })
+
         flash('Report submitted successfully!', 'success')
-        return redirect(url_for('url_bp.report'))  # Redirect to the report page
+        return redirect(url_for('url_bp.report'))  # Use blueprint name
 
     return render_template('report.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @url_bp.route('/analyze', methods=['POST'])
 def analyze():
