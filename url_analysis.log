@@ -320,3 +320,16 @@ INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 15:24:20] "[32mPOST /report HTTP/1.1[
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 15:24:20] "GET /report HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 15:24:20] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 15:24:20] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/damacm1147/Password-Leak-Checker/SecureVault---Password-Leak-Checker/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
