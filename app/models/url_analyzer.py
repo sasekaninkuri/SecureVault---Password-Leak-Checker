@@ -1,8 +1,11 @@
+from flask import Flask, render_template, request, jsonify
 from urllib.parse import urlparse
 import ipaddress
 import tldextract
 import whois
 from datetime import datetime
+
+app = Flask(__name__)
 
 class URLAnalyzer:
     def analyze_url(self, url):
@@ -14,8 +17,10 @@ class URLAnalyzer:
             "verdict": "",
             "score": 0,
             "flags": [],
-            "whois_info": {},           # renamed from whois
-            "ssl_certificate": {}       # renamed from ssl
+            "whois_info": {},
+            "ssl_certificate": {},
+            "notes": "",
+            "suggestions": []
         }
 
         score = 0
@@ -34,7 +39,7 @@ class URLAnalyzer:
             extracted = tldextract.extract(url)
             domain = f"{extracted.domain}.{extracted.suffix}".lower()
 
-            # === HTTPS Check ===
+            # HTTPS Check
             if parsed.scheme != 'https':
                 result["https_check"] = "Insecure (HTTP)"
                 flags.append("Uses HTTP instead of HTTPS")
@@ -42,7 +47,7 @@ class URLAnalyzer:
             else:
                 result["https_check"] = "Secure (HTTPS)"
 
-            # === IP Address Check ===
+            # IP Address Check
             try:
                 ipaddress.ip_address(parsed.hostname)
                 flags.append("Uses IP address instead of domain")
@@ -51,14 +56,14 @@ class URLAnalyzer:
             except ValueError:
                 result["domain_analysis"] = "Domain format is valid"
 
-            # === Suspicious TLD Check ===
+            # Suspicious TLD Check
             suspicious_tlds = {'.ru', '.cn', '.tk', '.ml', '.ga'}
             if any(domain.endswith(tld) for tld in suspicious_tlds):
                 flags.append(f"Suspicious TLD: {domain}")
                 score += 2
                 result["domain_analysis"] += " + Suspicious TLD"
 
-            # === WHOIS Lookup ===
+            # WHOIS Lookup
             try:
                 whois_data = whois.whois(domain)
                 creation_date = whois_data.creation_date
@@ -85,18 +90,20 @@ class URLAnalyzer:
                     "expires": "N/A"
                 }
 
-            # === Redirect check (Stub) ===
+            # Redirect check (stubbed)
             result["redirect_check"] = "No redirect detected (stub)"
 
-            # === Dummy SSL Certificate Info (Stub) ===
+            # Dummy SSL Certificate Info
             ssl_info = {
                 "issuer": "Let's Encrypt",
                 "expires": "2025-12-31"
             }
 
-            # === Verdict & Risk Score ===
+            # Verdict & Risk Score
             result["phishing_risk"] = "High" if score >= 4 else "Low"
             result["verdict"] = "Suspicious" if score >= 4 else "Likely Safe"
+            result["notes"] = "Multiple red flags were found during analysis." if score >= 4 else "No malicious indicators found."
+            result["suggestions"] = ["Avoid visiting", "Report to IT team"] if score >= 4 else ["Enable DNSSEC", "Monitor SSL renewal"]
             result["score"] = score
             result["flags"] = flags
             result["whois_info"] = domain_info
@@ -106,6 +113,23 @@ class URLAnalyzer:
             return {"error": f"Analysis failed: {str(e)}"}
 
         return result
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/analyze', methods=['POST'])
+def analyze():
+    data = request.get_json()
+    url = data.get('url', '')
+    analyzer = URLAnalyzer()
+    result = analyzer.analyze_url(url)
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 
 
         

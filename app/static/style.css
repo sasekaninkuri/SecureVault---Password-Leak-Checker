@@ -146,7 +146,7 @@ body, html {
 }
 
 .chat-container h2 {
-  background: #007bff;
+  background: #ce61ef;
   color: white;
   margin: 0;
   padding: 10px;
@@ -170,19 +170,19 @@ body, html {
 }
 
 .user-msg {
-  background: #dcf8c6;
+  background: #d078d3;
   align-self: flex-end;
   text-align: right;
 }
 
 .bot-msg {
-  background: #f1f0f0;
+  background: #737070;
   align-self: flex-start;
 }
 
 .chat-input {
   display: flex;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #979090;
 }
 
 .chat-input input {
@@ -193,7 +193,7 @@ body, html {
 }
 
 .chat-input button {
-  background: #007bff;
+  background: #742a6f;
   color: white;
   border: none;
   padding: 10px;
@@ -202,6 +202,24 @@ body, html {
 
 .chat-input input:focus, .chat-input button:focus {
   outline: none;
+}
+
+
+/* Footer styling */
+footer {
+  background-color: #9447a4; /* Dark background */
+  color: white; /* White text */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Padding above and below the text */
+  width: 100%; /* Full width */
+  margin-top: 200px; /* Pushes the footer to the bottom if content is short */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow at the top */
+
+}
+
+footer p {
+  margin: 0; /* Remove default paragraph margin */
+  font-size: 0.9em; /* Slightly smaller font size */
 }
 
 

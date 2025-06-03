@@ -55,19 +55,84 @@
         </div>
       </div>
     </section>
+
+    <script>
+      async function analyzeURL() {
+        const url = document.getElementById('urlInput').value;
+        if (!url) {
+          alert('Please enter a URL.');
+          return;
+        }
+      
+        try {
+          const response = await fetch('/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url })
+          });
+      
+          const data = await response.json();
+      
+          // Update UI with backend results or fallback to error text
+          document.getElementById('httpsStatus').innerText = data.https_check || "Error";
+          document.getElementById('domainAnalysis').innerText = data.domain_analysis || "Error";
+          document.getElementById('redirectInfo').innerText = data.redirect_check || "Error";
+          document.getElementById('phishingRisk').innerText = data.phishing_risk || "Error";
+      
+          // Display extended info in the result div
+          document.getElementById('result').innerHTML = `
+            <strong>Verdict:</strong> ${data.verdict || 'N/A'}<br/>
+            <strong>Notes:</strong> ${data.notes || 'None'}<br/>
+            <strong>Score:</strong> ${data.score ?? 'N/A'}<br/><br/>
+      
+            <strong>WHOIS Info:</strong><br/>
+            Domain: ${data.whois_info?.domain || 'N/A'}<br/>
+            Registrar: ${data.whois_info?.registrar || 'N/A'}<br/>
+            Created: ${data.whois_info?.created || 'N/A'}<br/>
+            Expires: ${data.whois_info?.expires || 'N/A'}<br/><br/>
+      
+            <strong>SSL Certificate:</strong><br/>
+            Issuer: ${data.ssl_certificate?.issuer || 'N/A'}<br/>
+            Expires: ${data.ssl_certificate?.expires || 'N/A'}<br/><br/>
+      
+            ${data.suggestions ? '<strong>Suggestions:</strong> ' + data.suggestions.join(', ') : ''}
+          `;
+      
+          // Optional: visualize score in chart
+          updateChart(data.score);
+      
+        } catch (error) {
+          console.error('Error analyzing URL:', error);
+          alert('Failed to analyze the URL. Please try again later.');
+        }
+      }
+      
+      function updateChart(score) {
+        const ctx = document.getElementById('riskChart').getContext('2d');
+        if (window.riskChart) window.riskChart.destroy(); // avoid duplicate charts
+      
+        window.riskChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Risk', 'Safe'],
+            datasets: [{
+              data: [score || 0, 100 - (score || 0)],
+              backgroundColor: ['#e74c3c', '#2ecc71'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            plugins: {
+              legend: { display: false }
+            },
+            cutout: '70%'
+          }
+        });
+      }
+      </script>
+      
     
     <button class="chat-toggle" onclick="toggleChat()">💬</button>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
