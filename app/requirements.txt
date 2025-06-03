@@ -2,3 +2,12 @@ flask
 tldextract
 python-whois
 google-generativeai # Added this line for the Gemini API
+flask
+bcrypt
+blinker
+click
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+gunicorn
