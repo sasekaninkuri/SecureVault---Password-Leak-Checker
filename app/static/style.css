@@ -203,3 +203,31 @@ body, html {
 .chat-input input:focus, .chat-input button:focus {
   outline: none;
 }
+
+
+
+
+
+
+
+
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #eb78d9;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #7e22ce;
+}
