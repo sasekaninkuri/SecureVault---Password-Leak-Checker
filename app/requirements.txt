@@ -11,3 +11,8 @@ Jinja2
 MarkupSafe
 Werkzeug
 gunicorn
+python-dotenv
+Flask
+Flask-PyMongo
+Flask-Session
+flask_session 

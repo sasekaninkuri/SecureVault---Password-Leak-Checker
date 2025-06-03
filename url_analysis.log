@@ -1,0 +1,259 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:39] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:39] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:50] "[35m[1mGET /report HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:50] "GET /report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:50] "GET /report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:50] "GET /report?__debugger__=yes&cmd=resource&f=console.png&s=L517CS96zT8Vz1b04Tqx HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:42:50] "GET /report?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:43:22] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:43:22] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:43:22] "GET /static/report.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:43:22] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:44:41] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:44:41] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:44:41] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:44:41] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:47:46] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:47:46] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:47:46] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:47:46] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:53:55] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:53:55] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:53:55] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:53:55] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:56:02] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:56:02] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:56:02] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:56:02] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:56:26] "[33mPOST /submit-report HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:18] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:18] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:18] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:18] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:57:59] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:00] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:00] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:00] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:58] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:58] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:58] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 13:58:58] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:30] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:30] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:30] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:34] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:34] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:05:34] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:06:40] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:06:40] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:06:40] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:06:40] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:24] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:24] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:24] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:24] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:41] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:41] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:41] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:07:41] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:07] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:07] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:07] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:07] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:35] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:35] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:35] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:08:35] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:09:29] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:09:29] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:09:29] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:09:29] "GET /static/image/Background%20of%20cyber%20security%20and%20network%20protection_%20_%20Premium%20Vector.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:23] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:23] "GET /static/about.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:23] "[36mGET /static/image/Background%20of%20cyber%20security%20and%20network%20protection_%20_%20Premium%20Vector.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:33] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:33] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:33] "[33mGET /static/image/Background%20of%20cyber%20security%20and%20network%20protection%20_%20_%20Premium%20Vector.jpeg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:39] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:39] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:41] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:41] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:41] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:41] "[36mGET /static/image/Background%20of%20cyber%20security%20and%20network%20protection_%20_%20Premium%20Vector.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:43] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:43] "GET /static/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:13:43] "[36mGET /static/image/Background%20of%20cyber%20security%20and%20network%20protection_%20_%20Premium%20Vector.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:03] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:03] "[36mGET /static/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:03] "[36mGET /static/image/Background%20of%20cyber%20security%20and%20network%20protection_%20_%20Premium%20Vector.jpeg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:05] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:05] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:14:05] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:07] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:09] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:10] "GET /static/about.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:10] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:14] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:14] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:14] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:14] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:17] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:18] "GET /static/contact.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:18] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:25] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:25] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:25] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:31] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:31] "[36mGET /static/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:33] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:33] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:15:33] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:44] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:16:45] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:17:08] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:17:08] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:17:08] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:17:08] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:15] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:15] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:15] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:15] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:25] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:25] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:25] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:29] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:29] "[36mGET /static/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:32] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:32] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:35] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:35] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:18:35] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:19:54] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:19:54] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:19:54] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:19:54] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:04] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:04] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:04] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:51] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:51] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:51] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:20:51] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:05] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:05] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:05] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:05] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:40] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:40] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:40] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:22:40] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:16] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:16] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:16] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:16] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:38] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:38] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:38] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:38] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:39] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:39] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:39] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:40] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:40] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:23:40] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:08] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:08] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:08] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:08] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:33] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:33] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:33] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:33] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:40] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:40] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:40] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:40] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:48] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:48] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:48] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:48] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:56] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:56] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:56] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:25:56] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:07] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:07] "GET /static/report.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:07] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:07] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:36] "[33mPOST /submit-report HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:26:55] "[33mPOST /submit-report HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:28] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:28] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:34] "POST /analyze HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:36:51] "POST /ask_cybersec_bot HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:37:28] "POST /ask_cybersec_bot HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 14:37:45] "POST /ask_cybersec_bot HTTP/1.1" 200 -

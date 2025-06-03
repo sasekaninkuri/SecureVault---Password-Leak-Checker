@@ -3,6 +3,10 @@ import ipaddress
 import tldextract
 import whois
 from datetime import datetime
+import logging
+
+# Configure logging
+logging.basicConfig(filename='url_analysis.log', level=logging.INFO)
 
 class URLAnalyzer:
     def analyze_url(self, url):
@@ -79,8 +83,9 @@ class URLAnalyzer:
                     "creation_date": str(creation_date) if creation_date else "N/A",
                     "expiration_date": str(whois_data.expiration_date) if whois_data.expiration_date else "N/A"
                 }
-            except Exception:
+            except Exception as e:
                 flags.append("WHOIS lookup failed")
+                logging.error(f"WHOIS lookup failed for {domain}: {str(e)}")
                 domain_info = {
                     "domain_name": "N/A",
                     "registrar": "N/A",
@@ -96,8 +101,12 @@ class URLAnalyzer:
             result["whois"] = domain_info
 
         except Exception as e:
+            logging.error(f"Analysis failed for {url}: {str(e)}")
             return {"error": f"Analysis failed: {str(e)}"}
 
         return result
 
+def process_report(url, details):
+    logging.info(f"Processing report: URL: {url}, Details: {details}")
+    # Add logic to save or analyze the report here
 

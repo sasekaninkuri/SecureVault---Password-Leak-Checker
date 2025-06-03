@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report - SecureLink Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='report.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <h2>SecureLink</h2>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/report" onclick="navigateTo(event, '/report')">Report</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+
+  <section class="container-image">
+    <div class="container">
+      <h1 class="title">Report a Suspicious URL</h1>
+      <form id="reportForm" action="/submit-report" method="post" onsubmit="return validateForm()">
+        <input type="text" name="url" id="url" placeholder="Suspicious URL" required class="input" />
+        <textarea name="details" placeholder="Describe the issue..." required class="input" rows="5"></textarea>
+        <button type="submit" class="button">Submit Report</button>
+        <button type="button" class="button" onclick="resetForm()">Reset</button>
+      </form>
+      <div id="successMessage" class="message" style="display:none;">Report submitted successfully!</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='report.js') }}"></script>
+</body>
+</html>

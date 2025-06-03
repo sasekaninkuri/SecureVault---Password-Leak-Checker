@@ -15,7 +15,6 @@
         <a href="/report">Report</a>
         <a href="/contact">Contact</a>
       </div>
-      
   </div>
 
   <section class="container-image">
@@ -28,8 +27,22 @@
       <p>
         This tool is perfect for individuals, businesses, and cybersecurity analysts who want to verify the trustworthiness of web links before clicking.
       </p>
+
+      <!-- New Contact Button -->
+      <div class="contact-button">
+        <button onclick="navigateTo(event, '/contact')">Contact Us</button>
+      </div>
+
+      <!-- FAQ Section -->
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div class="faq">
+        <h3>1. How does SecureLink Analyzer work?</h3>
+        <p>Our tool analyzes various factors such as domain age, WHOIS information, and HTTPS usage to assess URL safety.</p>
+        
+        <h3>2. Is SecureLink Analyzer free to use?</h3>
+        <p>Yes, SecureLink Analyzer is completely free for everyone to use!</p>
+      </div>
     </div>
-    
   </section>
 
   <script>
@@ -38,8 +51,5 @@
       window.location.href = path;
     }
   </script>
-
-
-  
 </body>
 </html>
