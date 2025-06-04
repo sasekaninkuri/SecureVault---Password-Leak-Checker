@@ -408,3 +408,166 @@ INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 16:14:49] "[33mGET / HTTP/1.1[0m" 404
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 16:14:49] "[33mGET / HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 16:14:49] "[33mGET / HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2025 16:14:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 09:03:26] "[33mGET /about HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:00:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:05] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:05] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:05] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:05] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:08] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:13] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:13] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:13] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:13] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:15] "[33mGET /contact HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:20] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:20] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:20] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:01:22] "[33mGET /about HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:13] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:30] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:30] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:30] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:30] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:05:33] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:53] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:53] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:53] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:55] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:55] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:09:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:10:01] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:10:01] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:10:01] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:10:01] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/damacm1147/Password-Leak-Checker/SecureVault---Password-Leak-Checker/app/run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:22] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:22] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:22] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:22] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:23] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:26] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:12:26] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:20:16] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/damacm1147/Password-Leak-Checker/SecureVault---Password-Leak-Checker/app/controllers/url_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug: * Detected change in '/Users/damacm1147/Password-Leak-Checker/SecureVault---Password-Leak-Checker/app/controllers/url_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 377-589-412
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:06] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:06] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:53] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:53] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:53] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:55] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:55] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:56] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:56] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:56] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:56] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:57] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:58] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:58] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:24:58] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:26:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:26:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:26:35] "[36mGET /static/chatbox.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:26:35] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:52] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:52] "[36mGET /static/about.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:52] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:55] "GET /contact HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:55] "[36mGET /static/contact.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:55] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:57] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:57] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:57] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:27:57] "[36mGET /static/image/1111.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:28:07] "[32mPOST /report HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:28:07] "GET /report HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:28:07] "[36mGET /static/report.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2025 13:28:07] "[36mGET /static/report.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/damacm1147/Password-Leak-Checker/SecureVault---Password-Leak-Checker/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
